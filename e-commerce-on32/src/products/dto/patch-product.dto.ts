@@ -1,20 +1,20 @@
 import { IsOptional, IsString, IsNumber, IsArray } from 'class-validator';
 
 export class PatchProductDto {
-    @IsString()
-    @IsOptional()
-    nome?: string;
+  @IsString()
+  @IsOptional()
+  nome?: string;
 
-    @IsString()
-    @IsOptional()
-    descricao?: string;
+  @IsString()
+  @IsOptional()
+  descricao?: string;
 
-    @IsNumber()
-    @IsOptional()
-    preco?: number;
+  @IsNumber()
+  @IsOptional()
+  preco?: number;
 
-    @IsArray()
-    @IsString({ each: true })
-    @IsOptional()
-    categoria?: string[];
+  @IsArray()
+  @IsString({ each: true })
+  @IsOptional()
+  categoria?: string[];
 }

@@ -13,6 +13,9 @@ const app_service_1 = require("./app.service");
 const typeorm_1 = require("@nestjs/typeorm");
 const products_module_1 = require("./products/products.module");
 const product_entity_1 = require("./products/product.entity");
+const clients_module_1 = require("./clients/clients.module");
+const purchases_module_1 = require("./purchases/purchases.module");
+const purchase_entity_1 = require("./purchases/entities/purchase.entity");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -20,12 +23,14 @@ exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
             typeorm_1.TypeOrmModule.forRoot({
-                type: 'sqlite',
+                type: 'postgres',
                 database: 'data.db',
-                entities: [product_entity_1.Product],
+                entities: [product_entity_1.Product, Client, purchase_entity_1.Purchase],
                 synchronize: true,
             }),
-            products_module_1.ProductsModule
+            products_module_1.ProductsModule,
+            clients_module_1.ClientsModule,
+            purchases_module_1.PurchasesModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

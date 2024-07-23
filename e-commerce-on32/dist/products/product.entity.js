@@ -31,7 +31,7 @@ __decorate([
     __metadata("design:type", Number)
 ], Product.prototype, "preco", void 0);
 __decorate([
-    (0, typeorm_1.Column)("simple-array"),
+    (0, typeorm_1.Column)('simple-array'),
     __metadata("design:type", Array)
 ], Product.prototype, "categoria", void 0);
 exports.Product = Product = __decorate([

@@ -14,6 +14,7 @@ Exemplo prático apresentado durante a aula da semana 07 do curso de Javascript 
 ### Selecionando a versão do Node.js e Instalando as Dependências
 
 ```bash
+cd e-commerce-on32
 nvm use 20
 npm i
 ```
